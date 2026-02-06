@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista Formulario - Heredar y agregar pestaña -->
+    <record id="hr_expense_form_view_inherit_travel" model="ir.ui.view">
+        <field name="name">hr.expense.form.inherit.travel</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Agregar pestaña después del notebook existente -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Solicitud de Viaje" name="travel_request_page" groups="hr_expense.group_hr_expense_user">
+                    <group>
+                        <group string="Información del Viaje" name="travel_info_group" col="2">
+                            <field name="travel_destination"/>
+                            <field name="travel_date"/>
+                            <field name="duration_days"/>
+                            <field name="transport_type"/>
+                        </group>
+                        <group string="Justificación" name="justification_group" col="2">
+                            <field name="trip_justification" nolabel="1" widget="text"
+                                   placeholder="Ingrese la justificación del viaje y los gastos realizados..."/>
+                        </group>
+                    </group>
+
+                    <separator string="Detalles de Gastos"/>
+                    <group>
+                        <group string="Expensas" name="expenses_group" col="2">
+                            <field name="expense_amount" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                        </group>
+                        <group string="Pasajes" name="tickets_group" col="2">
+                            <field name="ticket_amount" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- Vista Tree/List - Opcional: agregar columnas -->
+    <record id="hr_expense_tree_view_inherit_travel" model="ir.ui.view">
+        <field name="name">hr.expense.tree.inherit.travel</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="travel_destination" optional="show"/>
+                <field name="travel_date" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Vista Kanban - Opcional -->
+    <record id="hr_expense_kanban_view_inherit_travel" model="ir.ui.view">
+        <field name="name">hr.expense.kanban.inherit.travel</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_record_bottom')]" position="inside">
+                <div t-if="record.travel_destination.raw_value" class="text-muted">
+                    <i class="fa fa-map-marker"/> <field name="travel_destination"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Vista de búsqueda - Opcional -->
+    <record id="hr_expense_search_view_inherit_travel" model="ir.ui.view">
+        <field name="name">hr.expense.search.inherit.travel</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="travel_destination" string="Destino"/>
+                <filter name="filter_by_travel" string="Con Viaje" domain="[('travel_destination','!=',False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
