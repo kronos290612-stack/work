@@ -118,11 +118,11 @@
                     </group>
                     <div class="alert alert-info"
                          attrs="{'invisible': ['|', ('refund', '&gt;=', 0), ('is_liquidation', '=', False)]}">
-                        <strong>⚠️ Atención:</strong> El reintegro es negativo. Se creará una factura de proveedor al empleado.
+                        <strong>Atención:</strong> El reintegro es negativo. Se creará una factura de proveedor al empleado.
                     </div>
                     <div class="alert alert-success"
                          attrs="{'invisible': ['|', ('refund', '&lt;=', 0), ('is_liquidation', '=', False)]}">
-                        <strong>✅ Reimbursement in favor of the employee:</strong> A customer invoice will be created to return the excess amount.
+                        <strong>Reimbursement in favor of the employee:</strong> A customer invoice will be created to return the excess amount.
                     </div>
                 </div>
             </xpath>
