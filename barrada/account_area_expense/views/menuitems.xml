@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_hr_expense_by_area" name="Expenses by area" sequence="1" parent="hr_expense.menu_hr_expense_root" groups="account_area_expense.group_area_manager"/>
+
+    <menuitem id="menu_hr_account_area_expense_my_expenses_all" sequence="1" parent="menu_hr_expense_by_area"
+                  action="account_area_expense_actions_my_all" name="Expenses by area" groups="account_area_expense.group_area_manager"/>
+
+    <menuitem id="menu_hr_account_area_expense_sheet_all" sequence="20" parent="menu_hr_expense_by_area"
+                  action="action_account_area_expense_sheet_my_all"
+              name="Expense reports by area" groups="account_area_expense.group_area_manager"/>
+
+    <menuitem id="menu_account_area_expense_report" name="Expense Reports Area" sequence="2" parent="hr_expense.menu_hr_expense_root"
+                   action="action_account_area_expense_sheet_all"
+                   groups="account_area_expense.group_area_manager"/>
+
+    <menuitem id="menu_hr_expense_account_employee_expenses" name="Gastos por áreas" sequence="22"
+                  parent="account.menu_finance_payables" groups="account_area_expense.group_approves_area_expenses"
+                  action="action_account_area_expense_sheet_my_all"/>
+</odoo>
