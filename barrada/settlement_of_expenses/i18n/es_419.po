@@ -1,0 +1,539 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* settlement_of_expenses
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-22 21:16+0000\n"
+"PO-Revision-Date: 2026-02-22 16:18-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_419\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+msgid "Advances can only be settled on forms with a status of \"Approved\""
+msgstr ""
+"Los anticipos sólo se pueden liquidar en formularios con estado \"Aprobado\""
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+#: model:ir.model.fields.selection,name:settlement_of_expenses.selection__account_area_expense_sheet__type_ticket__air
+#: model:ir.model.fields.selection,name:settlement_of_expenses.selection__hr_expense_sheet__type_ticket__air
+msgid "Air"
+msgstr "Aéreo"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__airline
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__airline
+msgid "Airline"
+msgstr "Aereolinea"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense__total_expenses_verified
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense_sheet__total_verified_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense__total_expenses_verified
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense_sheet__total_verified_expenses
+msgid "Amount visible only when verified"
+msgstr "Monto visible solo cuando se verifica"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_res_company__expense_claim_use_same_journal
+msgid ""
+"By enabling this option, invoices generated from expense claims will use the "
+"same accounting journal configured in \"Expense Journal\"."
+msgstr ""
+"Al habilitar esta opción, las facturas generadas a partir de reclamos de "
+"gastos utilizarán el mismo diario contable configurado en \"Diario de "
+"gastos\"."
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense__verified
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense_sheet__verified
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense__verified
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense_sheet__verified
+msgid "Check to view total verified expenses"
+msgstr "Marque para ver el total de gastos verificados"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_res_config_settings__expense_claim_use_same_journal
+msgid "Claim invoices will use the same employee expense journal"
+msgstr ""
+"Las facturas de reclamaciones utilizarán el mismo diario de gastos de "
+"empleados"
+
+#. module: settlement_of_expenses
+#: model_terms:ir.ui.view,arch_db:settlement_of_expenses.view_res_config_settings_expense_claim_journal
+msgid "Claim invoices will use the same journal set up for employee expenses"
+msgstr ""
+"Las facturas de reclamaciones utilizarán el mismo diario de gastos de "
+"empleados"
+
+#. module: settlement_of_expenses
+#: model:ir.model,name:settlement_of_expenses.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: settlement_of_expenses
+#: model:ir.model,name:settlement_of_expenses.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_res_config_settings__expense_reimbursement_journal_id
+#: model_terms:ir.ui.view,arch_db:settlement_of_expenses.view_hr_expense_settings_reimbursement
+msgid "Default accounting journal for expense reimbursement."
+msgstr "Diario contable predeterminado para devolución de gastos."
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__destination
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__destination
+#: model_terms:ir.ui.view,arch_db:settlement_of_expenses.view_expense_sheet_form_inherit_settlement
+msgid "Destination"
+msgstr "Destino"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense__real_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense_sheet__real_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense__real_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense_sheet__real_expenses
+msgid "Enter the actual amount spent"
+msgstr "Ingrese el monto real gastado"
+
+#. module: settlement_of_expenses
+#: model:ir.model,name:settlement_of_expenses.model_hr_expense
+msgid "Expense"
+msgstr "Gastos"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_res_config_settings__expense_claim_use_same_journal
+msgid "Expense Claim Use Same Journal"
+msgstr "Uso del mismo diario en el reclamo de gastos"
+
+#. module: settlement_of_expenses
+#: model_terms:ir.ui.view,arch_db:settlement_of_expenses.view_hr_expense_settings_reimbursement
+msgid "Expense Reimbursement Journal"
+msgstr "Uso del mismo diario en el reclamo de gastos"
+
+#. module: settlement_of_expenses
+#: model:ir.model,name:settlement_of_expenses.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "Informe de gastos"
+
+#. module: settlement_of_expenses
+#: model_terms:ir.ui.view,arch_db:settlement_of_expenses.view_expense_sheet_form_inherit_settlement
+msgid "Expenses"
+msgstr "Gastos"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__flight
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__flight
+msgid "Flight"
+msgstr "Vuelo"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__flight_date
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__flight_date
+msgid "Flight Date"
+msgstr "Fecha de vuelo"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__date_since
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__date_since
+msgid "From"
+msgstr "Desde"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+msgid "Incorrect date range."
+msgstr "Rango de fechas incorrecto."
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__is_liquidation
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__is_liquidation
+msgid "Is_liquidation"
+msgstr "Es liquidación"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__justification
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__justification
+msgid "Justification"
+msgstr "Justification"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+#: model:ir.model.fields.selection,name:settlement_of_expenses.selection__account_area_expense_sheet__type_ticket__land_bus
+#: model:ir.model.fields.selection,name:settlement_of_expenses.selection__hr_expense_sheet__type_ticket__land_bus
+msgid "Land bus"
+msgstr "Autobús"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+#: model:ir.model.fields.selection,name:settlement_of_expenses.selection__account_area_expense_sheet__type_ticket__land_car
+#: model:ir.model.fields.selection,name:settlement_of_expenses.selection__hr_expense_sheet__type_ticket__land_car
+msgid "Land car (m2o)"
+msgstr "Auto(m2o)"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+#: model:ir.model.fields.selection,name:settlement_of_expenses.selection__account_area_expense_sheet__liquidation_status__liquidated
+#: model:ir.model.fields.selection,name:settlement_of_expenses.selection__hr_expense_sheet__liquidation_status__liquidated
+msgid "Liquidated"
+msgstr "Liquidado"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__liquidation_status
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__liquidation_status
+msgid "Liquidation Status"
+msgstr "Estado de liquidación"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense__refund
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense_sheet__refund
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense__refund
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense_sheet__refund
+msgid ""
+"Negative: employee owes money to the company\n"
+"Positive: company owes money to employee"
+msgstr ""
+"Negativo: el empleado le debe dinero a la empresa.\n"
+"Positivo: la empresa le debe dinero al empleado"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__number_days
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__number_days
+msgid "Number of days"
+msgstr "Número de días"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__original_sheet_id
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__original_sheet_id
+msgid "Original Sheet"
+msgstr "Hoja original"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense_sheet__original_sheet_id
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense_sheet__original_sheet_id
+msgid "Original advance payment slip that originated this settlement"
+msgstr "Comprobante de anticipo original que originó esta liquidación"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__overnight
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__overnight
+msgid "Overnight"
+msgstr "Pernocta"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+#: model:ir.model.fields.selection,name:settlement_of_expenses.selection__account_area_expense_sheet__liquidation_status__pending
+#: model:ir.model.fields.selection,name:settlement_of_expenses.selection__hr_expense_sheet__liquidation_status__pending
+msgid "Pending"
+msgstr "Pendiente"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense__supporting_documents
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense_sheet__supporting_documents
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense__supporting_documents
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense_sheet__supporting_documents
+msgid "Please Only Allowed Formats (PDF, JPG, JPEG or PNG)"
+msgstr "Solo formatos permitidos (PDF, JPG, JPEG o PNG)"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense__real_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__real_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense__real_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__real_expenses
+msgid "Real Expenses"
+msgstr "Gastos reales"
+
+#. module: settlement_of_expenses
+#: model_terms:ir.ui.view,arch_db:settlement_of_expenses.view_expense_sheet_form_inherit_settlement
+msgid "Reasons"
+msgstr "Razones"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense__refund
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__refund
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense__refund
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__refund
+msgid "Refund"
+msgstr "Reintegro"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_res_config_settings__expense_reimbursement_journal_id
+msgid "Reimbursement Log"
+msgstr "Diario de reembolsos"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+msgid ""
+"Report created on %s: <a href=\"/"
+"web#id=%s&amp;model=hr.expense.sheet&amp;view_type=form\">%s</a>"
+msgstr ""
+"Informe creado el %s: <a href=\"/"
+"web#id=%s&amp;model=hr.expense.sheet&amp;view_type=form\">%s</a>"
+
+#. module: settlement_of_expenses
+#: model_terms:ir.ui.view,arch_db:settlement_of_expenses.view_expense_sheet_form_inherit_settlement
+msgid "Request for Expenses and Travel"
+msgstr "Solicitud de Gastos y Viajes"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__route
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__route
+msgid "Route"
+msgstr "Ruta"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+msgid "SETTLEMENT %s"
+msgstr "LIQUIDACION %s"
+
+#. module: settlement_of_expenses
+#: model_terms:ir.ui.view,arch_db:settlement_of_expenses.view_expense_sheet_form_inherit_settlement
+msgid "Settle Advance"
+msgstr "Liquidar anticipo"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__settled_report
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__settled_report
+msgid "Settled report"
+msgstr "Informe liquidado"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__settlement_sheet_id
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__settlement_sheet_id
+msgid "Settlement Sheet"
+msgstr "Hoja de Liquidación"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+msgid ""
+"Settlement created on %s for advance: <a href=\"/"
+"web#id=%s&amp;model=hr.expense.sheet&amp;view_type=form\">%s</a>"
+msgstr ""
+"Liquidación creada el %s por anticipo: <a href=\"/"
+"web#id=%s&amp;model=hr.expense.sheet&amp;view_type=form\">%s</a>"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,help:settlement_of_expenses.field_account_area_expense_sheet__settlement_sheet_id
+#: model:ir.model.fields,help:settlement_of_expenses.field_hr_expense_sheet__settlement_sheet_id
+msgid "Settlement sheet associated with this advance"
+msgstr "Hoja de liquidación asociada a este anticipo"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense__supporting_documents
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__supporting_documents
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense__supporting_documents
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__supporting_documents
+msgid "Supporting Documents"
+msgstr "Documentos de respaldo"
+
+#. module: settlement_of_expenses
+#. odoo-python
+#: code:addons/settlement_of_expenses/models/hr_expense_sheet.py:0
+msgid ""
+"This sheet already has an associated settlement.:\n"
+"%s"
+msgstr ""
+"Esta hoja ya tiene un acuerdo asociado.:\n"
+"%s"
+
+#. module: settlement_of_expenses
+#: model_terms:ir.ui.view,arch_db:settlement_of_expenses.view_expense_sheet_form_inherit_settlement
+msgid "Tickets"
+msgstr "Billete"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__total_experiences_verified
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__total_experiences_verified
+msgid "Total Verified Expenses"
+msgstr "Gastos totales verificados"
+
+#. module: settlement_of_expenses
+#: model_terms:ir.ui.view,arch_db:settlement_of_expenses.view_expense_sheet_form_inherit_settlement
+msgid "Trip Details"
+msgstr "Detalles del viaje"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__type_ticket
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__type_ticket
+msgid "Type Ticket"
+msgstr "Tipo  de billete"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__date_up
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__date_up
+msgid "Until"
+msgstr "Hasta"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_res_company__expense_claim_use_same_journal
+msgid "Use the same journal for invoices per claim"
+msgstr "Utilice el mismo diario para facturas por reclamación"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense__verified
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__verified
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense__verified
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__verified
+msgid "Verified"
+msgstr "Verificado"
+
+#. module: settlement_of_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense__total_expenses_verified
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_account_area_expense_sheet__total_verified_expenses
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense__total_expenses_verified
+#: model:ir.model.fields,field_description:settlement_of_expenses.field_hr_expense_sheet__total_verified_expenses
+msgid "Verified Expenses"
+msgstr "Gastos verificados"
+
+#~ msgid "Action Needed"
+#~ msgstr "Acción necesaria"
+
+#~ msgid "Activities"
+#~ msgstr "Actividades"
+
+#~ msgid "Activity Exception Decoration"
+#~ msgstr "Decoración de excepción de actividad"
+
+#~ msgid "Activity State"
+#~ msgstr "Estado de actividad"
+
+#~ msgid "Activity Type Icon"
+#~ msgstr "Icono de tipo de actividad"
+
+#~ msgid "Attachment Count"
+#~ msgstr "Recuento de archivos adjuntos"
+
+#~ msgid "Created by"
+#~ msgstr "Creado por"
+
+#~ msgid "Created on"
+#~ msgstr "Creado el"
+
+#~ msgid "Display Name"
+#~ msgstr "Nombre para mostrar"
+
+#~ msgid "Followers"
+#~ msgstr "Seguidores"
+
+#~ msgid "Followers (Partners)"
+#~ msgstr "Seguidores (Socios)"
+
+#~ msgid "Font awesome icon e.g. fa-tasks"
+#~ msgstr "Icono de Font Awesome, por ejemplo, fa-tasks"
+
+#~ msgid "Generate Refund Invoice"
+#~ msgstr "Generar factura de reembolso"
+
+#~ msgid "Has Message"
+#~ msgstr "Tiene mensaje"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Icon"
+#~ msgstr "Icono"
+
+#~ msgid "Icon to indicate an exception activity."
+#~ msgstr "Icono para indicar una actividad de excepción."
+
+#~ msgid "If checked, new messages require your attention."
+#~ msgstr "Si está marcada, los mensajes nuevos requieren su atención."
+
+#~ msgid "If checked, some messages have a delivery error."
+#~ msgstr "Si está marcada, algunos mensajes tendrán un error de entrega."
+
+#~ msgid "Is Follower"
+#~ msgstr "Es seguidor"
+
+#~ msgid "Last Updated by"
+#~ msgstr "Última actualización por"
+
+#~ msgid "Last Updated on"
+#~ msgstr "Última actualización el"
+
+#~ msgid "Liquidation Report"
+#~ msgstr "Estado de liquidación"
+
+#~ msgid "Message Delivery error"
+#~ msgstr "Error de entrega del mensaje"
+
+#~ msgid "Messages"
+#~ msgstr "Mensajes"
+
+#~ msgid "My Activity Deadline"
+#~ msgstr "Fecha límite de mi actividad"
+
+#~ msgid "Next Activity Calendar Event"
+#~ msgstr "Próximo evento del calendario de actividades"
+
+#~ msgid "Next Activity Deadline"
+#~ msgstr "Fecha límite para la próxima actividad"
+
+#~ msgid "Next Activity Summary"
+#~ msgstr "Resumen de la próxima actividad"
+
+#~ msgid "Next Activity Type"
+#~ msgstr "Siguiente tipo de actividad"
+
+#~ msgid "Number of Actions"
+#~ msgstr "Número de accionesNúmero de días"
+
+#~ msgid "Number of errors"
+#~ msgstr "Número de errores"
+
+#~ msgid "Number of messages requiring action"
+#~ msgstr "Número de mensajes que requieren acción"
+
+#~ msgid "Number of messages with delivery error"
+#~ msgstr "Número de mensajes con error de entrega"
+
+#~ msgid "Responsible User"
+#~ msgstr "Usuario responsable"
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error de entrega de SMS"
+
+#~ msgid "Settlement reports only allow one line of expenses."
+#~ msgstr "Los informes de liquidación solo permiten una línea de gastos."
+
+#~ msgid ""
+#~ "Status based on activities\n"
+#~ "Overdue: Due date is already passed\n"
+#~ "Today: Activity date is today\n"
+#~ "Planned: Future activities."
+#~ msgstr ""
+#~ "Estado según actividades\n"
+#~ "Vencido: La fecha de vencimiento ya pasó\n"
+#~ "Hoy: La fecha de la actividad es hoy\n"
+#~ "Planificado: Actividades futuras"
+
+#~ msgid "Type of the exception activity on record."
+#~ msgstr "Tipo de actividad de excepción registrada."
+
+#~ msgid "Website Messages"
+#~ msgstr "Mensajes del sitio web"
+
+#~ msgid "Website communication history"
+#~ msgstr "Historial de comunicación del sitio web"

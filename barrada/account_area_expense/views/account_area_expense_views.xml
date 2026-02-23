@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_my_account_area_expense_tree" model="ir.ui.view">
+        <field name="name">account.area.expense.list</field>
+        <field name="model">account.area.expense</field>
+        <field name="priority">20</field>
+        <field name="inherit_id" ref="hr_expense.view_my_expenses_tree"/>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <field name="employee_id" position="replace">
+                <field name="area_manager_id" widget="many2one_avatar_user"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="account_area_expense_view_form" model="ir.ui.view">
+        <field name="name">account.area.expense.view.form</field>
+        <field name="model">account.area.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form"/>
+        <field eval="35" name="priority"/>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <header position="replace">
+                <header>
+                  <button name="action_submit_expenses" string="Create Report" type="object"
+                          class="oe_highlight o_expense_submit" invisible="nb_attachment &lt;= 0 or account_sheet_id" data-hotkey="v"/>
+                  <button name="action_view_sheet" type="object" string="View Report" class="oe_highlight" invisible="not account_sheet_id or nb_attachment &lt; 1" data-hotkey="w"/>
+                  <widget name="attach_document" string="Attach Receipt" action="attach_document" invisible="nb_attachment &lt; 1"/>
+                  <widget name="attach_document" string="Attach Receipt" action="attach_document" highlight="1" invisible="nb_attachment &gt;= 1"/>
+                  <button name="action_submit_expenses" string="Create Report" type="object" class="o_expense_submit"
+                          invisible="nb_attachment &gt;= 1 or account_sheet_id" data-hotkey="v"/>
+                  <field name="state" widget="statusbar" statusbar_visible="draft,reported,submitted,approved,done"
+                         invisible="state == 'refused'"/>
+                  <field name="state" widget="statusbar" statusbar_visible="draft,reported,submitted,refused"
+                         invisible="state != 'refused'"/>
+                  <button name="action_view_sheet" type="object" string="View Report" class="oe_highlight" invisible="not account_sheet_id or nb_attachment &gt;= 1" data-hotkey="w"/>
+                  <button name="action_split_wizard" string="Split Expense" type="object" invisible="account_sheet_id or product_has_cost"/>
+                </header>
+
+            </header>
+
+
+            <xpath expr="//t[@groups='hr_expense.group_hr_expense_team_approver']" position="replace">
+                <field name="area_manager_id" />
+                <field name="payment_account_mode" widget="radio"/>
+            </xpath>
+
+             <field name="vendor_id" position="replace">
+                    <field name="vendor_id"
+                           invisible="payment_account_mode != 'company'"
+                           required="payment_account_mode == 'company'"/>
+            </field>
+            <label id="lo" position="replace"/>
+            <div id="payment_mode" position="replace">
+            </div>
+
+        </field>
+    </record>
+
+    <record id="account_area_expense_view_form_without_header" model="ir.ui.view">
+            <field name="name">account.area.expense.view.form</field>
+            <field name="model">account.area.expense</field>
+            <field name="inherit_id" ref="hr_expense.hr_expense_view_form"/>
+            <field eval="35" name="priority"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+
+                <label id="lo" position="replace"/>
+                <div id="payment_mode" position="replace">
+                    <label id="lo" for="payment_account_mode"/>
+                    <div id="payment_account_mode">
+                        <field name="payment_account_mode" widget="radio" readonly="sheet_id"/>
+                    </div>
+                </div>
+
+
+
+                <field name="vendor_id" position="replace">
+                    <field name="vendor_id"
+                           invisible="payment_account_mode != 'company'"
+                           required="payment_account_mode == 'company'"/>
+                </field>
+
+            </field>
+        </record>
+
+
+    <record id="account_area_expense_actions_all" model="ir.actions.act_window">
+        <field name="name">Expenses Analysis</field>
+        <field name="res_model">account.area.expense</field>
+        <field name="view_mode">graph,pivot,list,form</field>
+        <field name="search_view_id" ref="hr_expense.hr_expense_view_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                No data yet!
+            </p><p>
+                Create new account area expense to get statistics.
+            </p>
+        </field>
+    </record>
+
+    <record id="account_area_expense_actions_all_graph" model="ir.actions.act_window.view">
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="hr_expense.hr_expense_view_graph"/>
+        <field name="act_window_id" ref="account_area_expense_actions_all"/>
+    </record>
+
+    <record id="account_area_expense_actions_all_pivot" model="ir.actions.act_window.view">
+        <field name="view_mode">pivot</field>
+        <field name="view_id" ref="hr_expense.hr_expense_view_pivot"/>
+        <field name="act_window_id" ref="account_area_expense_actions_all"/>
+    </record>
+
+    <record id="account_area_expense_actions_all_tree" model="ir.actions.act_window.view">
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="hr_expense.hr_expense_view_expenses_analysis_tree"/>
+        <field name="act_window_id" ref="account_area_expense_actions_all"/>
+    </record>
+
+    <record id="account_area_expense_actions_my_all" model="ir.actions.act_window">
+        <field name="name">My Expenses</field>
+        <field name="path">expenses_area</field>
+        <field name="res_model">account.area.expense</field>
+        <field name="view_mode">list,kanban,form,graph,pivot,activity</field>
+        <field name="search_view_id" ref="hr_expense.hr_expense_view_search"/>
+        <field name="context">{'search_default_my_expenses': 1}</field>
+        <field name="help" type="html">
+            <div class="o_view_nocontent_expense_receipt o_view_pink_overlay">
+                <p class="o_view_nocontent_expense_receipt_image"/>
+                <h2 class="d-md-block">
+                    Upload or drop an expense receipt
+                </h2>
+            </div>
+        </field>
+    </record>
+
+    <!-- List & Kanban view for "All My Expenses" with header -->
+    <record id="account_area_expense_actions_my_all_tree" model="ir.actions.act_window.view">
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_my_account_area_expense_tree"/>
+        <field name="act_window_id" ref="account_area_expense_actions_my_all"/>
+    </record>
+
+    <record id="account_area_expense_actions_my_all_kanban" model="ir.actions.act_window.view">
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="hr_expense.hr_expense_kanban_view_header"/>
+        <field name="act_window_id" ref="account_area_expense_actions_my_all"/>
+    </record>
+
+       
+        
+</odoo>
