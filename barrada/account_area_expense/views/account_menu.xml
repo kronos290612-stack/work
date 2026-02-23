@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-
-    <menuitem id="menu_account_area_expense"  name="Expense Area"
-              action=""
-              parent="account.menu_finance_payables" sequence="300"/>
-
-</odoo>

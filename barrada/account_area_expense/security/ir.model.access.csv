@@ -1,6 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_account_area_expense,account.area.expense,model_account_area_expense,account_area_expense.group_area_manager,1,1,1,1
-access_account_area_expense_sheet,account.area.expense.sheet,model_account_area_expense_sheet,account_area_expense.group_area_manager,1,1,1,1
-
-access_account_area_expense_approve_area,account.area.expense.approve.area,model_account_area_expense,account_area_expense.group_approves_area_expenses,1,1,1,1
-access_account_area_expense_sheet_approve_area,account.area.expense.sheet.approve.area,model_account_area_expense_sheet,account_area_expense.group_approves_area_expenses,1,1,1,1
